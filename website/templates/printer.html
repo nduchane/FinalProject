@@ -1,4 +1,57 @@
-{% extends "base.html" %} {% block title %}Changed{% endblock %}
+{% extends "base.html" %} {% block title %}Asset Inventory - Printers{% endblock %}
 
 {% block content %}
+<main class="page landing-page">
+    <!-- Start: Features Small Icons Color -->
+    <div class="container text-white bg-primary bg-gradient border-0 shadow-lg p-4 p-lg-5 py-4 py-xl-5">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2 class="text-white">Printers</h2>
+            </div>
+        </div>
+        <div class="row gy-2 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-3">
+            <div class="col"><label class="form-label" for="asset">Asset Number:&nbsp;&nbsp;</label><input type="text" name="asset" placeholder="ex. IND-5SY7WE"></div>
+            <div class="col"><label class="form-label" for="sn">Serial Number:&nbsp;&nbsp;</label><input type="text" name="sn" placeholder="ex. 5SY7WE"></div>
+            <div class="col"><label class="form-label" for="date">Date Purchased:&nbsp;&nbsp;</label><input type="text" name="date" placeholder="ex. 05/05/1991"></div>
+            <div class="col"><label class="form-label" for="location">Location:&nbsp;&nbsp;</label><input type="text" name="location" placeholder="ex. Cafeteria"></div>
+            <div class="col"><label class="form-label" for="ipaddress">I.P. Address:&nbsp;&nbsp;</label><input type="text" placeholder="ex. 192.168.2.2" name="ipaddress"></div>
+            <div class="col"><label class="form-label" for="printer">Model Number:&nbsp;&nbsp;</label><input type="text" placeholder="ex. Ricoh i5600" name="printer"></div>
+        </div>
+        <div class="row">
+            <div class="col p-2">
+                <div style="text-align: center;"><button class="btn btn-primary" type="button" style="background: var(--bs-gray-dark);">Update/Add Asset</button><button class="btn btn-primary" type="button" style="background: var(--bs-gray-dark);">Delete Asset</button></div>
+            </div>
+        </div>
+        <div class="row" style="color: var(--bs-blue);background: var(--bs-light);">
+            <div class="col" style="color: rgb(255,255,255);padding-right: 0;padding-left: 0;">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="text-align: center;padding: 2px;font-size: 14px;">Asset Number</th>
+                                <th style="text-align: center;padding: 2px;font-size: 14px;">Serial Number</th>
+                                <th style="text-align: center;padding: 2px;font-size: 14px;">Date Purchased</th>
+                                <th style="text-align: center;padding: 2px;font-size: 14px;">Location</th>
+                                <th style="text-align: center;padding: 2px;font-size: 14px;">IP Address</th>
+                                <th style="text-align: center;padding: 2px;font-size: 14px;">Model</th>
+                                <th style="text-align: center;padding: 2px;font-size: 14px;">Load Asset</th>
+                            </tr>
+                        </thead>
+                        <tbody class="border-secondary">
+                            <tr>
+                                <td style="text-align: left;padding: 0;font-size: 14px;">Cell 1</td>
+                                <td style="text-align: left;padding: 0;font-size: 14px;">Cell 2</td>
+                                <td style="text-align: left;padding: 0;font-size: 14px;">Cell 3</td>
+                                <td style="text-align: left;padding: 0;font-size: 14px;">Cell 4</td>
+                                <td style="text-align: left;padding: 0;font-size: 14px;">Cell 5</td>
+                                <td style="text-align: left;padding: 0;font-size: 14px;">Cell 6</td>
+                                <td style="text-align: center;padding: 0;font-size: 14px;"><button class="btn btn-primary" type="button" style="padding: 0;">Load</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div><!-- End: Features Small Icons Color -->
+</main>
 {% endblock %}

@@ -1,4 +1,46 @@
-{% extends "base.html" %} {% block title %}Changed{% endblock %}
+{% extends "base.html" %} {% block title %}Asset Inventory{% endblock %}
 
 {% block content %}
+<main class="page landing-page">
+    <section class="clean-block clean-hero" style="background-image: url(&quot;../static/tech/image4.jpg&quot;);color: rgba(9, 162, 255, 0.85);height: 400px;min-height: 250px;">
+        <div class="text">
+            <h2>This site is a demo for an Asset Inventory System</h2>
+            <p style="margin: 0px;">It was designed with Python as the backend programming language along with Flask and using HTML/CSS along with Bootstrap for the frontend for mobile first.</p>
+        </div>
+    </section>
+    <section class="clean-block clean-hero" style="color: var(--bs-white);height: 200px;min-height: 200px;border-style: none;background: var(--bs-body-bg);">
+        <div class="text">
+            <h2 style="color: #3b99e0;">Info</h2>
+            <p style="margin: 0px;color: var(--bs-gray-600);font-family: Montserrat, sans-serif;">Use the Navigation menu on top to cycle through the different type of Assets.</p>
+        </div>
+    </section>
+    <section class="clean-block about-us" style="padding: 0px;">
+        <div class="container">
+            <div class="block-heading" style="padding: 0px 0px 0px;">
+                <h2 class="text-info">About Us</h2>
+                <p>We are 2 students at Ivy Tech Community College.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card text-center clean-card"><img class="card-img-top w-100 d-block" src="../static/avatars/avatar1.jpg">
+                        <div class="card-body info">
+                            <h4 class="card-title">Nicholas DuChane</h4>
+                            <p class="card-text">Software Development Major at Ivy Tech.</p>
+                            <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card text-center clean-card"><img class="card-img-top w-100 d-block" src="../static/avatars/avatar2.jpg">
+                        <div class="card-body info">
+                            <h4 class="card-title">Matthew Hollen</h4>
+                            <p class="card-text">Is in the "We're Lost" Group in SDEV 220.</p>
+                            <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 {% endblock %}

@@ -1,19 +1,20 @@
-{% extends "base.html" %} {% block title %}Asset Inventory - Computers{% endblock %}
+{% extends "base.html" %} {% block title %}Asset Inventory - Phones{% endblock %}
 
 {% block content %}
 <main class="page landing-page">
     <!-- Start: Features Small Icons Color -->
-    <div class="container text-white bg-primary bg-gradient border rounded border-0 shadow-lg p-4 p-lg-5 py-xl-5" style="padding-bottom: 0px;">
+    <div class="container text-white bg-primary bg-gradient border rounded border-0 shadow-lg p-4 p-lg-5 py-4 py-xl-5">
         <div class="row mb-5">
             <div class="col-md-8 col-xl-6 text-center mx-auto">
-                <h2 class="text-white">Personal Computers / Laptops</h2>
+                <h2 class="text-white">Cell Phones</h2>
             </div>
         </div>
         <div class="row gy-2 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-3">
-            <div class="col"><label class="form-label" for="asset">Asset Number:&nbsp;&nbsp;</label><input type="text" placeholder="ex. IND-5SY7WE" name="asset" style="text-align: left;"></div>
+            <div class="col"><label class="form-label" for="asset">Asset Number:&nbsp;&nbsp;</label><input type="text" placeholder="ex. IND-5SY7WE" name="asset"></div>
             <div class="col"><label class="form-label" for="sn">Serial Number:&nbsp;&nbsp;</label><input type="text" placeholder="ex. 5SY7WE" name="sn"></div>
-            <div class="col"><label class="form-label" for="date">Date Purchased:&nbsp;&nbsp;</label><input type="text" name="date" placeholder="ex. 05/05/1991"></div>
-            <div class="col"><label class="form-label" for="user">Assigned User:&nbsp;&nbsp;</label><input type="text" placeholder="ex. John Smith" name="user"></div>
+            <div class="col"><label class="form-label" for="date">Date Purchased:&nbsp;&nbsp;</label><input type="text" placeholder="ex. 05/05/1991" name="date"></div>
+            <div class="col"><label class="form-label" for="user">Assigned User:&nbsp;&nbsp;</label><input type="text" name="user" placeholder="ex. John Smith"></div>
+            <div class="col"><label class="form-label" for="phone">Phone Number:&nbsp;&nbsp;</label><input type="text" name="phone" placeholder="ex. 317-455-1200"></div>
         </div>
         <div class="row">
             <div class="col p-2">
@@ -21,7 +22,7 @@
             </div>
         </div>
         <div class="row" style="color: var(--bs-blue);background: var(--bs-light);">
-            <div class="col" style="color: rgb(255,255,255);padding: 0;">
+            <div class="col" style="color: rgb(255,255,255);padding-right: 0;padding-left: 0;">
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
@@ -30,6 +31,7 @@
                                 <th style="text-align: center;">Serial Number</th>
                                 <th style="text-align: center;">Date Purchased</th>
                                 <th style="text-align: center;">Assigned User</th>
+                                <th style="text-align: center;">Phone Number</th>
                                 <th style="text-align: center;">Load Asset</th>
                             </tr>
                         </thead>
@@ -39,6 +41,7 @@
                                 <td style="text-align: left;">Cell 2</td>
                                 <td style="text-align: left;">Cell 3</td>
                                 <td style="text-align: left;">Cell 4</td>
+                                <td style="text-align: left;">Cell 5</td>
                                 <td style="text-align: center;"><button class="btn btn-primary" type="button" style="padding: 0;">Load</button></td>
                             </tr>
                         </tbody>

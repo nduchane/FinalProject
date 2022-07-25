@@ -18,6 +18,6 @@ def printer():
     return render_template("printer.html")
 
 
-@views.route('/phone')
+@views.route('/phones')
 def phone():
-    return render_template("phone.html")
+    return render_template("phones.html")
