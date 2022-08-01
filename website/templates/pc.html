@@ -8,20 +8,20 @@
             <div class="col-md-8 col-xl-6 text-center mx-auto">
                 <h2 class="text-white">Personal Computers / Laptops</h2>
             </div>
-        </div>
+        </div><form method="POST">
         <div class="row gy-2 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-3">
             <div class="col"><label class="form-label" for="asset">Asset Number:&nbsp;&nbsp;</label><input type="text" placeholder="ex. IND-5SY7WE" name="asset" style="text-align: left;"></div>
             <div class="col"><label class="form-label" for="sn">Serial Number:&nbsp;&nbsp;</label><input type="text" placeholder="ex. 5SY7WE" name="sn"></div>
-            <div class="col"><label class="form-label" for="date">Date Purchased:&nbsp;&nbsp;</label><input type="text" name="date" placeholder="ex. 05/05/1991"></div>
+            <div class="col"><label class="form-label" for="date">Date Purchased:&nbsp;&nbsp;</label><input type="text" placeholder="ex. 05/05/1991" name="date"></div>
             <div class="col"><label class="form-label" for="user">Assigned User:&nbsp;&nbsp;</label><input type="text" placeholder="ex. John Smith" name="user"></div>
         </div>
         <div class="row">
             <div class="col p-2">
-                <div style="text-align: center;"><button class="btn btn-primary" type="button" style="background: var(--bs-gray-dark);">Update/Add Asset</button><button class="btn btn-primary" type="button" style="background: var(--bs-gray-dark);">Delete Asset</button></div>
+                <div style="text-align: center;"><button class="btn btn-primary" type="submit" style="background: var(--bs-gray-dark);" value="Add Asset" name="submit">Add Asset</button></div>
             </div>
-        </div>
+        </div></form>
         <div class="row" style="color: var(--bs-blue);background: var(--bs-light);">
-            <div class="col" style="color: rgb(255,255,255);padding: 0;">
+            <div class="col" style="color: rgb(255,255,255);padding-right: 0;padding-left: 0;">
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
@@ -30,17 +30,19 @@
                                 <th style="text-align: center;">Serial Number</th>
                                 <th style="text-align: center;">Date Purchased</th>
                                 <th style="text-align: center;">Assigned User</th>
-                                <th style="text-align: center;">Load Asset</th>
+                                <th style="text-align: center;">Delete</th>
                             </tr>
                         </thead>
                         <tbody class="border-secondary">
+                            {% for item in data %}
                             <tr>
-                                <td style="text-align: left;">Cell 1</td>
-                                <td style="text-align: left;">Cell 2</td>
-                                <td style="text-align: left;">Cell 3</td>
-                                <td style="text-align: left;">Cell 4</td>
-                                <td style="text-align: center;"><button class="btn btn-primary" type="button" style="padding: 0;">Load</button></td>
+                                <td style="text-align: left;">{{ item.asset }}</td>
+                                <td style="text-align: left;">{{ item.sn }}</td>
+                                <td style="text-align: left;">{{ item.date }}</td>
+                                <td style="text-align: left;">{{ item.user }}</td><form method="POST">
+                                <td style="text-align: center;"><button class="btn btn-primary" type="submit" name="submit" style="padding: 0;" value="{{ item.asset }}">Delete</button></form></td>
                             </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>

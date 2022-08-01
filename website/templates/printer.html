@@ -8,7 +8,7 @@
             <div class="col-md-8 col-xl-6 text-center mx-auto">
                 <h2 class="text-white">Printers</h2>
             </div>
-        </div>
+        </div><form method="POST">
         <div class="row gy-2 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-3">
             <div class="col"><label class="form-label" for="asset">Asset Number:&nbsp;&nbsp;</label><input type="text" name="asset" placeholder="ex. IND-5SY7WE"></div>
             <div class="col"><label class="form-label" for="sn">Serial Number:&nbsp;&nbsp;</label><input type="text" name="sn" placeholder="ex. 5SY7WE"></div>
@@ -19,9 +19,9 @@
         </div>
         <div class="row">
             <div class="col p-2">
-                <div style="text-align: center;"><button class="btn btn-primary" type="button" style="background: var(--bs-gray-dark);">Update/Add Asset</button><button class="btn btn-primary" type="button" style="background: var(--bs-gray-dark);">Delete Asset</button></div>
+                <div style="text-align: center;"><button class="btn btn-primary" type="submit" style="background: var(--bs-gray-dark);" value="Add Asset" name="submit">Add Asset</button></div>
             </div>
-        </div>
+        </div></form>
         <div class="row" style="color: var(--bs-blue);background: var(--bs-light);">
             <div class="col" style="color: rgb(255,255,255);padding-right: 0;padding-left: 0;">
                 <div class="table-responsive">
@@ -34,19 +34,21 @@
                                 <th style="text-align: center;padding: 2px;font-size: 14px;">Location</th>
                                 <th style="text-align: center;padding: 2px;font-size: 14px;">IP Address</th>
                                 <th style="text-align: center;padding: 2px;font-size: 14px;">Model</th>
-                                <th style="text-align: center;padding: 2px;font-size: 14px;">Load Asset</th>
+                                <th style="text-align: center;padding: 2px;font-size: 14px;">Delete</th>
                             </tr>
                         </thead>
                         <tbody class="border-secondary">
+                            {% for item in data %}
                             <tr>
-                                <td style="text-align: left;padding: 0;font-size: 14px;">Cell 1</td>
-                                <td style="text-align: left;padding: 0;font-size: 14px;">Cell 2</td>
-                                <td style="text-align: left;padding: 0;font-size: 14px;">Cell 3</td>
-                                <td style="text-align: left;padding: 0;font-size: 14px;">Cell 4</td>
-                                <td style="text-align: left;padding: 0;font-size: 14px;">Cell 5</td>
-                                <td style="text-align: left;padding: 0;font-size: 14px;">Cell 6</td>
-                                <td style="text-align: center;padding: 0;font-size: 14px;"><button class="btn btn-primary" type="button" style="padding: 0;">Load</button></td>
+                                <td style="text-align: left;">{{ item.asset }}</td>
+                                <td style="text-align: left;">{{ item.sn }}</td>
+                                <td style="text-align: left;">{{ item.date }}</td>
+                                <td style="text-align: left;">{{ item.location }}</td>
+                                <td style="text-align: left;">{{ item.ipaddress }}</td>
+                                <td style="text-align: left;">{{ item.printer }}</td><form method="POST">
+                                <td style="text-align: center;"><button class="btn btn-primary" type="submit" name="submit" style="padding: 0;" value="{{ item.asset }}">Delete</button></form></td>
                             </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>
